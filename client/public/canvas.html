@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <link rel="stylesheet" href="styles/canvas.css" />
+    <script src="scripts/canvas.js" defer></script>
+  </head>
+  <body>
+    <canvas id="canvas"> A blank canvas </canvas>
+    <div class="container">
+      <form action="">
+        <label for="image-file-upload" id="upload-label">
+          <input
+            type="file"
+            name="image-file"
+            id="image-file-upload"
+            class="transparent"
+          />
+          Upload an image
+        </label>
+        <a class="btn btn-primary" onclick="resetImageUpload()">Reset</a>
+        <a class="btn btn-primary" onclick="saveImageUpload()">Save</a>
+      </form>
+    </div>
+    <div>
+      <h2>Your image preview here</h2>
+      <img src="" id="preview" />
+    </div>
+  </body>
+</html>

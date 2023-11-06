@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Pic Maker</title>
+    <link
+      rel="stylesheet"
+      href="./../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link href="https://fonts.cdnfonts.com/css/quicksand" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="scripts/canvas.js" defer></script>
+  </head>
+  <body>
+    <div class="container-fluid d-flex justify-content-center">
+      <div class="d-grid justify-content-center wrapper">
+        <div id="image-header">
+          <h1 class="prevent-select">Profile Pic Maker</h1>
+          <h2 class="prevent-select no-margin">
+            Upload a file to create a profile image
+          </h2>
+        </div>
+        <div id="image-grid">
+          <canvas id="canvas"> A blank canvas </canvas>
+          <div>
+            <img src="" id="preview" />
+          </div>
+        </div>
+        <label for="image-file-upload" id="upload-label" class="transparent">
+          <input
+            type="file"
+            name="image-file"
+            id="image-file-upload"
+            class="transparent"
+          />
+        </label>
+        <div>
+          <p class="info-msg no-margin">"Hello"</p>
+        </div>
+        <div id="image-footer" class="justify-content-evenly">
+          <a class="btn btn-primary img-btn" id="upload-btn">Upload</a>
+          <a class="btn btn-primary img-btn" id="clear-btn">Clear</a>
+          <a class="btn btn-primary img-btn" id="save-btn">Save</a>
+        </div>
+      </div>
+    </div>
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

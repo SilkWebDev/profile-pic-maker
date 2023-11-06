@@ -1,0 +1,140 @@
+body {
+  height: 100vh;
+  /* max-height: 100vh; */
+  min-height: 100vh;
+  font-family: 'Quicksand Book', sans-serif;
+}
+
+.info-msg {
+  text-align: center;
+  visibility: hidden;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.img-btn {
+  font-family: system-ui, sans-serif;
+  width: 150px;
+}
+
+.center-vertical {
+  position: absolute;
+  top: 50%;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 900px;
+  background-color: rgba(160, 169, 176, 0.05);
+  padding: 25px;
+}
+
+.wrapper > div {
+  height: min-content;
+  align-content: center;
+}
+
+#image-header {
+  text-align: center;
+  margin: auto;
+}
+
+#image-upload {
+  width: 400px;
+  height: 400px;
+  border: 5px solid rgba(1, 1, 1, 0);
+  border-radius: 50%;     
+  margin: auto;
+  /* background-image: url('/client/public/images/border.png');
+  background-size: cover;
+  background-repeat: no-repeat; */
+
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.33s ease-in;
+}
+
+.mask {
+  -webkit-mask-image: url('/client/public/images/border.png');
+  mask-image: url('/client/public/images/border.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;   
+  mask-size: 50%;
+}
+
+#image-upload.dragging {
+  border: 5px solid rgba(0, 128, 0, 0.5);
+  opacity: 0.66;
+  transform: scale(0.95);
+}
+
+#image-preview {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.66;
+}
+
+#image-form {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#image-field {
+  display: none;
+}
+
+#image-field-wrapper {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#image-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+canvas {
+  border-radius: 50%;
+}
+
+.transparent {
+  display: none;
+}
+
+#upload-label {
+  cursor: pointer;
+}
+
+#preview {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: dashed 3px rgba(50, 50, 50, 0.33);
+}
+
+#image-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
