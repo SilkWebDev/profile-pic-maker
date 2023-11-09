@@ -1,6 +1,5 @@
 body {
   height: 100vh;
-  /* max-height: 100vh; */
   min-height: 100vh;
   font-family: 'Quicksand Book', sans-serif;
 }
@@ -49,9 +48,6 @@ body {
   border: 5px solid rgba(1, 1, 1, 0);
   border-radius: 50%;     
   margin: auto;
-  /* background-image: url('/client/public/images/border.png');
-  background-size: cover;
-  background-repeat: no-repeat; */
 
   box-sizing: border-box;
   cursor: pointer;
@@ -60,13 +56,13 @@ body {
   transition: all 0.33s ease-in;
 }
 
-.mask {
+/* .mask {
   -webkit-mask-image: url('/client/public/images/border.png');
   mask-image: url('/client/public/images/border.png');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;   
   mask-size: 50%;
-}
+} */
 
 #image-upload.dragging {
   border: 5px solid rgba(0, 128, 0, 0.5);
@@ -102,7 +98,7 @@ body {
 }
 
 #image-footer {
-  display: flex;
+  display: flex; 
   justify-content: space-between;
 }
 
