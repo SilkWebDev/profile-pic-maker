@@ -1,4 +1,4 @@
-# /node_modules
+/node_modules
 /public/styles/canvas.css
 /public/scripts/main.js
-# /public/node_modules
+/public/node_modules
