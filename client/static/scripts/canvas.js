@@ -51,27 +51,55 @@ window.onload = () => {
   drawBorder();
 };
 
-CANVAS.addEventListener('mousedown', function (e) {
-  mouseDown = true;
-  mouseXY.x = e.offsetX;
-  mouseXY.y = e.offsetY;
-  updateDiff();
-});
-
-CANVAS.addEventListener('mouseup', (e) => {
-  mouseDown = false;
-});
-
-CANVAS.addEventListener('mousemove', function (e) {
-  if (!mouseDown || !imageDrawn) return;
-  window.requestAnimationFrame(function () {
-    clearCanvas();
-    imageXY.x = e.offsetX - diffXY.x;
-    imageXY.y = e.offsetY - diffXY.y;
-    draw(CONTEXT, image, imageXY.x, imageXY.y);
-    drawBorder();
+['mousedown', 'touchdown'].forEach((ev) => {
+  CANVAS.addEventListener(ev, function (e) {
+    mouseDown = true;
+    mouseXY.x = e.offsetX;
+    mouseXY.y = e.offsetY;
+    updateDiff();
   });
 });
+
+// CANVAS.addEventListener('mousedown', function (e) {
+//   mouseDown = true;
+//   mouseXY.x = e.offsetX;
+//   mouseXY.y = e.offsetY;
+//   updateDiff();
+// });
+
+['mouseup', 'touchup'].forEach((ev) => {
+  CANVAS.addEventListener(ev, function (e) {
+    mouseDown = false;
+  });
+});
+
+// CANVAS.addEventListener('mouseup', (e) => {
+//   mouseDown = false;
+// });
+
+['mousemove', 'touchmove'].forEach((ev) => {
+  CANVAS.addEventListener(ev, function (e) {
+    if (!mouseDown || !imageDrawn) return;
+    window.requestAnimationFrame(function () {
+      clearCanvas();
+      imageXY.x = e.offsetX - diffXY.x;
+      imageXY.y = e.offsetY - diffXY.y;
+      draw(CONTEXT, image, imageXY.x, imageXY.y);
+      drawBorder();
+    });
+  });
+});
+
+// CANVAS.addEventListener('mousemove', function (e) {
+//   if (!mouseDown || !imageDrawn) return;
+//   window.requestAnimationFrame(function () {
+//     clearCanvas();
+//     imageXY.x = e.offsetX - diffXY.x;
+//     imageXY.y = e.offsetY - diffXY.y;
+//     draw(CONTEXT, image, imageXY.x, imageXY.y);
+//     drawBorder();
+//   });
+// });
 
 IMAGE_FILE_UPLOAD.addEventListener('change', function () {
   reset();
