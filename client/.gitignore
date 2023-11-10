@@ -1,3 +1,4 @@
 node_modules
 static/scripts/main.js
 static/styles/canvas.css
+static/node_modules
