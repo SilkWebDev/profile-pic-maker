@@ -1,2 +1,3 @@
-/styles/canvas.css
-/scripts/main.js
+node_modules
+static/scripts/main.js
+static/styles/canvas.css

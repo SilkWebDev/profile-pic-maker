@@ -184,6 +184,7 @@ function saveImageUpload() {
   crop();
   const img = CANVAS.toDataURL();
   document.getElementById('preview').src = img;
+  document.getElementById('preview-header').classList.add('hidden');
 }
 
 function drawBackgroundPlaceholder() {
