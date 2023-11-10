@@ -39,7 +39,7 @@ CANVAS.setAttribute('height', CANVAS_H);
 const OFFSCREEN_CANVAS = new OffscreenCanvas(CANVAS_W, CANVAS_H);
 const OFFSCREEN_CONTEXT = OFFSCREEN_CANVAS.getContext('2d');
 const borderImg = new Image();
-borderImg.src = './images/border.png';
+borderImg.src = './static/images/border.png';
 borderImg.onload = () => {
   OFFSCREEN_CONTEXT.drawImage(borderImg, 0, 0, CANVAS_W, CANVAS_H);
 };
